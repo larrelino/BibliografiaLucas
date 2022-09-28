@@ -1,59 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="pt-br">
 
-    <title>Minha Bibliografia</title>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-</head>
-<body>
-    <div id="capa" class="backgrond-ps">
-        <img src="../imgs/perfil.jpeg" alt="Foto do GitHub">
-        <h1>Loren Ipsum é simplesmente uma</h1>
-    </div>
-    <div>
-        <div id="biografia" class="backgrond-sp">
-            <h2>texto</h2>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta charset="UTF-8">
+        <title>Minha Bibliografia</title> 
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <nav id="menu">
+            <div id="dark-light">
+                <p>Dark</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <ul>
+                <a href="#"><li><h2>Home</h2></li></a>
+                <a href="#"><li><h2>Biografia</h2></li></a>
+                <a href="#"><li><h2>Portfólio</h2></li></a>
+                <a href="#"><li><h2>Contato</h2></li></a>
+            </ul>
+        </nav>
+
+        <div id="capa" class="background-ps">
+            <div class="row">
+                <img src="imgs/perfil.jpeg" alt="Foto do GitHub">
+
+                <h1>Lorem Ipsum é simplesmente uma maravilha!</h1>
+            </div>
         </div>
 
-        <div>
-            <div>
-                <img src="../imgs/logoifc.png" alt="Logo da Instituição">
-                <p>Curso Técnico em Informática Integrafo ao Ensino Médio</p>
+
+        <div id="biografia" class="background-sp">
+            <div class="text">
+                <h2>texto</h2>
             </div>
 
-            <figure>
-                <img src="" alt="Logo da Instituição">
-                <figcaption>
-                    Curso Técnico em Informática Integrafo ao Ensino Médio
-                </figcaption>
-            </figure>
+            <div class="grid-item content">
+                <div>
+                    <img src="imgs/logo.png" alt="Logo da Instituição">
+                    <p>Curso Técnico em Informática Integrado ao Ensino Médio</p>
+                </div>
 
-        </div>
-    </div>
-    <div id="portfolio" class="background-ps">
-        <div>Tecnologias
-            <select name="" id="tec-op"></select>
-        </div>
-        <div>Projetos</div>
-    </div>
-    <div id="contato" class="background-sp">
-        <form action="#">
-            <div>
-                <input type="text" placeholder="Nome">
-                <input type="text" placeholder="Sobrenome">
-                <br>
-                <input type="email" id="" name="" placeholder="E-mail">
-                <input type="number" placeholder="Contato">
+                <figure>
+                    <img src="imgs/logo.png" alt="Logo da Instituição">
+                    <figcaption>
+                        Curso Técnico em Informática Integrado ao Ensino Médio
+                    </figcaption>
+                </figure>
             </div>
-            <select name="" id="">
+        </div>
+        
+        <div id="portfólio" class="background-ps">
+            <div>Tecnologias
+                <select name="" id="tec-ops">
 
-            </select>
-            <p>checkbox</p>
-            <textarea name="" id="" placeholder="Escreva sua necessidade..."></textarea>
-            <button type="submit">ENVIAR</button>
-        </form>
-    </div>
-    
-</body>
+                </select>
+
+            </div>
+
+            <div>Projetos</div>
+
+        </div>
+
+
+        <div id="contato" class="background-sp">
+
+            <form action="#">
+                <div>
+                    <input type="text" placeholder="Nome" />
+                    <input type="text" placeholder="Sobrenome" />
+                    <input type="email" name="" id="" placeholder="E-mail">
+                    <input type="number" name="" id="" placeholder="Contato">
+                </div>
+
+                <select name="" id="">
+
+                </select>
+                <p>checkbox</p>
+                <textarea name="" id="" placeholder="Escreva sua necessidade..."></textarea>
+
+                <button type="submit">ENVIAR</button>
+            </form>
+
+        </div>
+
+
+
+    </body>
+
 </html>
