@@ -7,17 +7,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <meta charset="UTF-8">
-        <title>Minha Bibliografia</title> 
+        <title>Minha Biografia</title> 
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="estilo.css">
+        
+        <script>
+            function darkMode(){
+                let body = document.getElementById('body');
+                let texto = document.getElementById('dark-text');
+                if (texto.innerHTML == 'Dark'){
+                    body.classList.remove('darkmode');
+                    body.classList.add('lightmode');
+                    texto.innerHTML = 'Light';
+                }else{
+                    body.classList.add('darkmode');
+                    body.classList.remove('lightmode');
+                    texto.innerHTML = "Dark";
+                }
+            }
+            function tempo() {
+                let tempo = new Date().getHours();
+                console.log(tempo);
+
+                if (tempo <= 18 && tempo >= 7){
+                    darkMode();
+                }
+            }
+        </script>
     </head>
-    <body>
+    <body id="body" class="darkmode" onload="tempo()">
         
         <nav id="menu">
             <div id="dark-light">
-                <p>Dark</p>
+                <p id="dark-text">Dark</p>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" onclick="darkMode()">
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -39,37 +63,122 @@
 
 
         <div id="biografia" class="background-sp">
-            <div class="text">
-                <h2>texto</h2>
+            <div class="grid-item text">
+                <h2>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</h2>
             </div>
 
             <div class="grid-item content">
-                <div>
+                <div class="grid-item-item1 item">
                     <img src="imgs/logo.png" alt="Logo da Instituição">
                     <p>Curso Técnico em Informática Integrado ao Ensino Médio</p>
                 </div>
 
-                <figure>
-                    <img src="imgs/logo.png" alt="Logo da Instituição">
+                <figure class="grid-item-item2 item">
+                    <img src="imgs/ufpr.jpeg" alt="Logo da Instituição">
                     <figcaption>
-                        Curso Técnico em Informática Integrado ao Ensino Médio
+                        <p>Futuro Bacharelado em Medicina Veterinária</p>
                     </figcaption>
                 </figure>
             </div>
         </div>
         
-        <div id="portfólio" class="background-ps">
-            <div>Tecnologias
+        <div id="portfolio" class="background-ps">
+            <div id="tecnologias">
                 <select name="" id="tec-ops">
-
+                    <option value="">Tecnologia</option>
+                    <option value="">Sustentabilidade</option>
+                    <option value="">Educação</option>
+                    <option value="">Empreendedorismo</option>
                 </select>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="topo">
+                            <input type="checkbox" name="HTML">
+                            <label for="HTML">HTML</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="CSS">
+                            <label for="CSS">CSS</label>
+                        </div>
+                    </div>
+
+                    <div class="col center">
+                        <div class="topo">
+                            <input type="checkbox" name="JS">
+                            <label for="JS">JavaScript</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="Vue">
+                            <label for="Vue">Vue JS</label>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="topo">
+                            <input type="checkbox" name="Python">
+                            <label for="Python">Python</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="Django">
+                            <label for="Django">Django</label>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div id="projetos">
+                <h2>Projetos</h2>
+                
+                <div id="slider">
+
+                    <figure class="slide">
+                        <img src="./imgs/textura.jpg" alt="">
+                        <figcaption>
+                            <h2>Portfólio</h2>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <p>Este é trabalho para revisar os conteúdos iniciais de Desenvolvimento Web I.</p>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="slide">
+                        <img src="./imgs/textura.jpg" alt="">
+                        <figcaption>
+                            <h2>Portfólio</h2>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <p>Este é trabalho para revisar os conteúdos iniciais de Desenvolvimento Web I.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="slide">
+                        <img src="./imgs/textura.jpg" alt="">
+                        <figcaption>
+                            <h2>Portfólio</h2>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <p>Este é trabalho para revisar os conteúdos iniciais de Desenvolvimento Web I.</p>
+                        </figcaption>
+                    </figure>
+
+                </div>
+                
 
             </div>
 
-            <div>Projetos</div>
-
         </div>
-
 
         <div id="contato" class="background-sp">
 
